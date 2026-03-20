@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Squid Play — Watch Hindi S1–S3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0b15" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&family=Inter:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-- Custom cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <header class="site-header reveal-on-scroll">
+        <div class="wrap">
+            <a href="#" class="logo">Squid <span>Play</span></a>
+            <nav class="main-nav">
+                <a href="#seasons">Seasons</a>
+                <a href="#tnc">Terms</a>
+                <a href="#unreal">Unreal Studio</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="wrap hero-content">
+
+                <!-- Squid Army Image -->
+                <div class="hero-content">
+                    <div class="hero-image">
+                        <div class="squid-army-wrapper">
+                            <img src="squid_army.png" alt="Squid Army" class="squid-army reveal-on-scroll">
+                        </div>
+                    </div>
+
+                    <div class="hero-text">
+                        <h1 class="sg-title reveal-on-scroll">
+                            <span>SQUID</span> <span>GAME</span>
+                        </h1>
+                        <p class="tagline reveal-on-scroll">
+                            Survive the odds. <strong>Watch every episode in Hindi.</strong>
+                        </p>
+                        <a href="#seasons" class="cta reveal-on-scroll">Start Watching</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="hero-glow"></div>
+        </section>
+
+        <!-- Seasons -->
+        <section id="seasons" class="seasons-section">
+            <div class="wrap">
+                <h2 class="section-title reveal-on-scroll">All Seasons</h2>
+                <div id="seasonsContainer" class="seasons-container"></div>
+            </div>
+        </section>
+
+        <!-- Terms + Privacy -->
+        <section id="tnc" class="tnc-section">
+            <div class="wrap">
+                <h2 class="section-title reveal-on-scroll">Terms & Conditions + Privacy Policy</h2>
+                <div class="cards">
+                    <article class="card reveal-on-scroll">
+                        <h3>Terms & Conditions</h3>
+                        <p>
+                            This site embeds content via third-party iframes provided by their respective owners.
+                            By using this site, you agree not to infringe on copyrights and to comply with all
+                            applicable laws.
+                            We do not host any videos.
+                        </p>
+                    </article>
+                    <article class="card reveal-on-scroll">
+                        <h3>Privacy Policy</h3>
+                        <p>
+                            We minimize data collection. Local preferences (likes, watch progress) are stored in your
+                            browser
+                            using localStorage and are never sent to a server.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unreal Studio proposal -->
+        <section id="unreal" class="unreal-section">
+            <div class="wrap unreal-grid">
+                <div class="unreal-logo reveal-on-scroll" aria-hidden="true">
+                    <!-- Simple geometric U logo (placeholder) -->
+                    <svg viewBox="0 0 200 200" role="img" aria-label="Unreal Studio Logo">
+                        <defs>
+                            <linearGradient id="g1" x1="0" x2="1">
+                                <stop offset="0" />
+                                <stop offset="1" />
+                            </linearGradient>
+                        </defs>
+                        <rect x="10" y="10" width="180" height="180" rx="28" ry="28" fill="url(#g1)" />
+                        <path d="M60,60 v60 a40,40 0 0 0 80,0 v-60 h20 v60 a60,60 0 0 1 -120,0 v-60 z" fill="#0b0b15" />
+                    </svg>
+                    <div class="u-name">Unreal Studio</div>
+                </div>
+                <div class="unreal-copy reveal-on-scroll">
+                    <h2>Partner Spotlight: Unreal Studio</h2>
+                    <p>
+                        Unreal Studio is a software company. They focus on building their own projects—and now they’re
+                        bringing that product-first mindset to the marketplace to help people create their dream
+                        software
+                        and <em>scale</em> those dreams into reality.
+                    </p>
+                    <blockquote>
+                        “Connect Your Visual Reality”
+                        <cite>— CEO, Unreal Studio</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <p>It is a sample test project of Unreal Studio</p>
+            <p>Contact us: <a href="mailto:ceo.at.unrealstudio@gmail.com">ceo.at.unrealstudio@gmail.com</a></p>
+            <p class="copy">© 2025 Unreal Studio. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+</body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyD05-dNa0tryo1lY74AWAfCWz9SygW-tC4",
+        authDomain: "unreal-31ecc.firebaseapp.com",
+        projectId: "unreal-31ecc",
+        storageBucket: "unreal-31ecc.firebasestorage.app",
+        messagingSenderId: "1037102179399",
+        appId: "1:1037102179399:web:be5e2a9e0a3d3fcb753d62",
+        measurementId: "G-K12TT2NJJN"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+</script>
+
+<script src="app.js" defer></script>
+
+</html>

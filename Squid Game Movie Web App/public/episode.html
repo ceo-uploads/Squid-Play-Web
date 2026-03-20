@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Squid Play — Episode</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&family=Inter:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="episode-body">
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <header class="site-header compact">
+    <div class="wrap">
+      <a class="logo" href="index.html">Squid <span>Play</span></a>
+      <nav class="main-nav">
+        <a href="index.html#seasons">Seasons</a>
+        <a href="index.html#tnc">Terms</a>
+        <a href="index.html#unreal">Unreal Studio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="episode-page">
+    <div class="wrap">
+      <div class="player-and-meta">
+        <div class="player-shell reveal-on-scroll">
+          <div id="iframeMount" class="responsive-iframe">
+            <div class="video-placeholder">
+              <img src="${item.thumbnail || 'assets/default.jpg'}" id="epThumbnail" alt="Episode preview">
+              <button id="playBtn" class="play-btn">▶ Play</button>
+            </div>
+          </div>
+
+        </div>
+
+        <aside class="meta-card reveal-on-scroll">
+          <h1 id="epTitle" class="ep-title">Episode</h1>
+          <p id="epDesc" class="ep-desc"></p>
+
+          <div class="actions">
+            <button id="likeBtn" class="btn action">
+              <span class="icon">👍</span> <span id="likeCount">0</span>
+            </button>
+            <button id="dislikeBtn" class="btn action">
+              <span class="icon">👎</span> <span id="dislikeCount">0</span>
+            </button>
+            <button id="shareBtn" class="btn action">
+              <span class="icon">🔗</span> Share
+            </button>
+          </div>
+
+          <div class="details">
+            <div class="row"><span>Season</span><strong id="epSeason">—</strong></div>
+            <div class="row"><span>Episode</span><strong id="epNumber">—</strong></div>
+            <div class="row"><span>Language</span><strong>Hindi (Dub)</strong></div>
+          </div>
+        </aside>
+      </div>
+
+      <section class="more-episodes">
+        <h2 class="section-title">More from this season</h2>
+        <div id="moreContainer" class="episodes-row"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>It is a sample test project of Unreal Studio</p>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+
+</html>

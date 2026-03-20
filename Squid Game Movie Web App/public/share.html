@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Share — Squid Play</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="share.css">
+</head>
+<body>
+  <main class="share-container">
+    <h1 class="share-title">Squid <span>Play</span></h1>
+    <p class="share-desc">Watch episodes in Hindi with your friends. Generate and share this QR code for quick access.</p>
+
+    <div class="qr-box">
+      <canvas id="qrCanvas"></canvas>
+    </div>
+
+    <div class="share-actions">
+      <button id="saveBtn">Save QR</button>
+      <button id="copyBtn">Copy Link</button>
+    </div>
+
+    <section class="share-text">
+      <h2>Share and Watch Together</h2>
+      <p>
+        Invite your friends by sharing the link or QR code. Enjoy Squid Play episodes in sync and
+        experience the thrill together, no matter where you are.
+      </p>
+    </section>
+  </main>
+
+  <footer class="share-footer">
+    <p>© 2025 Unreal Studio. All rights reserved.</p>
+  </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode/1.5.1/qrcode.min.js"></script>
+<script src="share.js"></script>
+
+</body>
+</html>

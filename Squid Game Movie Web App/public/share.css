@@ -1,0 +1,258 @@
+/* =========================
+   Root Colors & Fonts
+   ========================= */
+:root {
+    --bg: #0b0b15;
+    --accent: #ff2d96;
+    --accent2: #35ffd1;
+    --text: #fff;
+    --muted: #bbb;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    background: radial-gradient(circle at top, #151525, var(--bg) 85%);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* =========================
+   Container
+   ========================= */
+.share-container {
+    padding: 60px 20px;
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =========================
+   Title
+   ========================= */
+.share-title {
+    font-family: Oxanium, sans-serif;
+    font-size: clamp(50px, 10vw, 120px);
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #fff, var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 0;
+    text-shadow: 0 0 25px rgba(255, 45, 150, 0.6);
+}
+
+.share-title span {
+    color: var(--accent);
+    text-shadow: 0 0 35px rgba(255, 45, 150, 0.7);
+}
+
+/* =========================
+   Description
+   ========================= */
+.share-desc {
+    margin: 20px auto 40px;
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* =========================
+   QR Canvas
+   ========================= */
+.qr-box {
+    margin: 40px auto;
+}
+
+.qr-box canvas {
+    width: 350px !important;
+    /* increased size */
+    height: 350px !important;
+    display: block;
+    border: 10px solid #FF3B3F;
+    /* red border */
+    border-radius: 25px;
+    background: var(--bg);
+    box-shadow: 0 0 50px #FF3B3F,
+        0 0 90px #35ffd1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.qr-box canvas:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 70px #FF3B3F,
+        0 0 120px #35ffd1;
+}
+
+/* =========================
+   Buttons
+   ========================= */
+.share-actions {
+    margin: 40px auto;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.share-actions button {
+    position: relative;
+    padding: 16px 40px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #0b0b15;
+    background: linear-gradient(135deg, #FF1E3C, #FF6EC7, #35FFD1);
+    box-shadow: 0 4px 15px rgba(255, 30, 60, 0.5),
+        0 0 30px rgba(53, 255, 209, 0.4),
+        0 8px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.share-actions button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.2) 100%);
+    transform: translateX(-100%) skewX(-25deg);
+    transition: all 0.6s ease;
+    border-radius: 50px;
+}
+
+.share-actions button:hover::before {
+    transform: translateX(200%) skewX(-25deg);
+}
+
+.share-actions button:hover {
+    transform: scale(1.12) translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 30, 60, 0.7),
+        0 0 50px rgba(53, 255, 209, 0.6),
+        0 12px 50px rgba(0, 0, 0, 0.35);
+    filter: brightness(1.25);
+}
+
+
+/* =========================
+   Extra Text Section
+   ========================= */
+.share-text {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.share-text h2 {
+    font-family: Oxanium, sans-serif;
+    font-size: clamp(24px, 6vw, 32px);
+    color: var(--accent);
+    text-shadow: 0 0 20px rgba(255, 45, 150, 0.6),
+        0 0 45px rgba(53, 255, 209, 0.4);
+    margin-bottom: 12px;
+}
+
+.share-text p {
+    color: var(--muted);
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* =========================
+   Footer
+   ========================= */
+.share-footer {
+    margin-top: auto;
+    padding: 30px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: #0a0a14;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.share-footer p {
+    margin: 6px 0;
+}
+
+.share-footer .copy {
+    font-size: 13px;
+    color: #777;
+}
+
+/* =========================
+   Animations
+   ========================= */
+@keyframes neonPulse {
+
+    0%,
+    100% {
+        text-shadow: 0 0 15px var(--accent),
+            0 0 25px var(--accent2);
+    }
+
+    50% {
+        text-shadow: 0 0 35px var(--accent),
+            0 0 60px var(--accent2);
+    }
+}
+
+.share-title {
+    animation: neonPulse 2s infinite alternate;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+.cursor-ring {
+    position: fixed;
+    pointer-events: none;
+    width: 36px;
+    height: 36px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    /* keep centering */
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0.7;
+    z-index: 9999;
+}
+
+
+
+/**/
+.video-placeholder, .lazy-ep {
+  position: relative;
+  background: #000;
+  cursor: pointer;
+}
+.video-placeholder img, .lazy-ep img {
+  width: 100%;
+  display: block;
+}
+.play-btn {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.6);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+}
